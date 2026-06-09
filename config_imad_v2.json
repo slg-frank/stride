@@ -1,0 +1,46 @@
+{
+  "data_config": {
+    "train_data_path": "./tt_chunk/chunk_train_with_embeddings.pkl",
+    "test_data_path": "./tt_chunk/chunk_test_with_embeddings.pkl",
+    "metadata_path": "./tt_chunk/SN/metadata.json",
+    "teacher_embedding_path": "./data/template_embeddings.pkl"
+  },
+
+  "model_architecture": {
+
+    "num_class": 2,
+    "mm_classifier_hiddens": [128]
+  },
+
+  "feature_switches": {
+    "use_sccgf": true,
+    "use_imad_v2": true,
+    "use_multiview_rca": true
+  },
+
+  "loss_weights": {
+    "kl_weight": 0.1,
+    "conf_weight": 0.6,
+    "alpha_task": 0.7,
+    "lambda_struct": 0.1,
+    "lambda_distill": 0.1
+  },
+
+  "training_config": {
+    "lr": 0.01,
+    "epochs": 100,
+    "batch_size": 256,
+    "patience": 11,
+    "eval_every": 5
+  },
+
+  "system_config": {
+    "use_gpu": true,
+    "random_seed": 46,
+    "num_workers": 0
+  },
+
+  "output_config": {
+    "result_dir": "./results/imad_v4"
+  }
+}
