@@ -1,4 +1,4 @@
-# STRIDE: Structure-aware Multi-view Interaction Modeling for Joint Anomaly Detection and Root Cause Localization in Microservice Systems
+# STRIDE: Structure-Aware Multi-View Interaction for End-to-End Multimodal Failure Diagnosis in Microservice Systems
 
 ### Architecture
 
@@ -23,15 +23,13 @@ The repository has some important dependencies below
 
 ### Dataset
 
-The publicly available dataset used in this paper, named socialnetwork, can be downloaded from <https://doi.org/10.5281/zenodo.7615393>.
-
-The other dataset that we don't have a permission to publish
+The publicly available dataset used in this paper, named socialnetwork, can be downloaded from <https://doi.org/10.5281/zenodo.7615393>. In addition, we have open-sourced the dataset we collected ourselves, which is publicly available at <https://doi.org/10.5281/zenodo.21023678> and <https://doi.org/10.5281/zenodo.21024164>.
 
 
 
 ### Training
 
-The instructions for running model MUAD are as follows.
+The training and testing of the model are carried out together. Run the following command, and the model will be able to perform training and testing:
 
 ```python
 python train_imad_v2
